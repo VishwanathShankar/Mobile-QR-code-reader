@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mobile QR Code Reader"
+  short_description: "Work on this Ionic QR scanner app"
+  default_prompt: "Use $mobile-qr-code-reader to safely update the Ionic QR scanner app."

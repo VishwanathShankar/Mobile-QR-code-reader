@@ -1,0 +1,130 @@
+.scanner-page {
+  display: grid;
+  gap: 18px;
+  min-height: 100%;
+  padding: 22px 18px 32px;
+  align-content: start;
+  background:
+    linear-gradient(180deg, rgba(72, 137, 255, 0.12), transparent 240px),
+    var(--ion-background-color);
+}
+
+.scanner-panel {
+  display: grid;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid rgba(120, 134, 156, 0.24);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--ion-background-color) 88%, var(--ion-color-light));
+  box-shadow: 0 18px 40px rgba(22, 34, 51, 0.08);
+}
+
+.scanner-mark {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 8px;
+  color: var(--ion-color-primary);
+  background: rgba(72, 137, 255, 0.12);
+}
+
+.scanner-mark ion-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.scanner-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.scanner-copy h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.12;
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.scanner-copy p,
+.status-line {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.scanner-copy p {
+  color: var(--ion-color-medium);
+}
+
+.scan-button {
+  min-height: 52px;
+  --border-radius: 8px;
+  font-weight: 700;
+}
+
+.scan-button ion-spinner {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.status-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.status-line ion-icon {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+}
+
+.result-card {
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(22, 34, 51, 0.08);
+}
+
+.result-heading {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.result-text {
+  overflow: auto;
+  max-height: 280px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgba(120, 134, 156, 0.24);
+  border-radius: 8px;
+  color: var(--ion-color-dark);
+  background: rgba(120, 134, 156, 0.08);
+  font: 500 15px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.copy-note {
+  display: block;
+  margin-top: 10px;
+}
+
+@media (min-width: 720px) {
+  .scanner-page {
+    width: min(720px, 100%);
+    margin: 0 auto;
+    padding-top: 36px;
+  }
+}
