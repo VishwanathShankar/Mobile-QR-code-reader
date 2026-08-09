@@ -12,6 +12,7 @@ This is a simple Ionic/Capacitor mobile app for scanning QR codes and displaying
 Ensure to have node.js installed 
 ```bash
 npm install
+npm start
 ```
 
 ## Native platform setup
