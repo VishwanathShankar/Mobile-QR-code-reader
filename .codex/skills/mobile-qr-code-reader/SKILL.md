@@ -1,6 +1,6 @@
 ---
 name: mobile-qr-code-reader
-description: Project guide for working on the Mobile QR Code Reader repository, an Ionic/Angular/Capacitor app that scans QR codes with @capacitor/barcode-scanner. Use when modifying scanner behavior, Ionic standalone components, Angular routes/styles/tests, Capacitor native configuration, README setup notes, or validation workflows in this repo.
+description: Project guide and fast orientation source for the Mobile QR Code Reader repository, an Ionic/Angular/Capacitor app that scans QR codes with @capacitor/barcode-scanner. Use for prompts like "Explore and understand the codebase", "summarize this repo", "what does this app do", and when modifying scanner behavior, Ionic standalone components, Angular routes/styles/tests, Capacitor native configuration, README setup notes, or validation workflows in this repo.
 ---
 
 # Mobile QR Code Reader
@@ -8,6 +8,22 @@ description: Project guide for working on the Mobile QR Code Reader repository, 
 ## Overview
 
 Use this skill to make changes in this QR scanner app without re-discovering its structure. Favor small, mobile-first updates that preserve the current Ionic standalone-component style and Capacitor scanner behavior.
+
+## Fast Orientation
+
+For broad orientation prompts such as "Explore and understand the codebase", answer from this skill first. Do not scan every file in the repository unless the user asks for a fresh audit, current file-by-file inventory, or changes that require reading specific source files.
+
+Give this concise answer shape:
+
+- This is a compact Ionic + Angular + Capacitor QR scanner app.
+- The app bootstraps through standalone Angular in `src/main.ts`, uses Ionic providers, and lazy-loads `HomePage` from the `/home` route.
+- Almost all product behavior lives in `src/app/home/home.page.ts`.
+- The scanner flow guards against duplicate scans, opens `@capacitor/barcode-scanner`, scans QR codes with the back camera, displays trimmed results, formats the barcode type, handles empty/error/cancel/permission states, and supports copy/reset actions.
+- The UI lives in `src/app/home/home.page.html`, with mobile-first styles in `src/app/home/home.page.scss`.
+- Native Capacitor config lives in `capacitor.config.ts`; Android/iOS package dependencies exist, but generated native platform folders may be absent.
+- Validation is usually `npm run lint`, `npm run build`, and `npm test -- --watch=false --browsers=ChromeHeadless` when tests are relevant.
+
+If the user asks whether anything changed since this skill was written, run `git status --short` first, then inspect only changed or task-relevant files.
 
 ## Project Map
 
